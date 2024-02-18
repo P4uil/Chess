@@ -1,0 +1,1 @@
+This is my personal project (in the early stages of development) - a chess game being developed in Swift for iOS and iPadOS platforms. The game aims to incorporate multiplayer functionality, an AI opponent, competitive mode with a ranking system, casual mode, a rewards and achievements system, various visual themes, as well as educational components.
