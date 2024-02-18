@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="Chess" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R9T-yO-ev0" customClass="BoardView" customModule="Chess" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="227" width="390" height="390"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="R9T-yO-ev0" secondAttribute="height" multiplier="1:1" id="VVk-BY-6h7"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="21h-wx-v5Y">
+                                <rect key="frame" x="161" y="625" width="68" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="21h-wx-v5Y" secondAttribute="height" multiplier="68:35" id="1N3-aX-6vM"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Reset"/>
+                                <connections>
+                                    <action selector="reset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3p8-wI-fnu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aTE-AI-VtV">
+                                <rect key="frame" x="65" y="675" width="96" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Advertise"/>
+                                <connections>
+                                    <action selector="advertise:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1QQ-Ps-wLs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2DQ-1h-POz">
+                                <rect key="frame" x="254" y="675" width="56" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Join"/>
+                                <connections>
+                                    <action selector="join:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jIc-uQ-Lsq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="21h-wx-v5Y" firstAttribute="top" secondItem="R9T-yO-ev0" secondAttribute="bottom" constant="8" symbolic="YES" id="3iV-2z-NAD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="21h-wx-v5Y" secondAttribute="trailing" constant="161" id="E2T-kB-3MM"/>
+                            <constraint firstItem="R9T-yO-ev0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="GBb-BY-FeF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="R9T-yO-ev0" secondAttribute="trailing" id="aLv-qh-ZIb"/>
+                            <constraint firstItem="21h-wx-v5Y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="161" id="kla-8l-VJm"/>
+                            <constraint firstItem="R9T-yO-ev0" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="uNv-ME-3Yk"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="BoardView" destination="R9T-yO-ev0" id="79S-sj-INP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="189" y="3"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
