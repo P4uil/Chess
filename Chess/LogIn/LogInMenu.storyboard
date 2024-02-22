@@ -40,6 +40,7 @@
                                     <fontDescription key="titleFontDescription" name="Verdana" family="Verdana" pointSize="15"/>
                                 </buttonConfiguration>
                                 <connections>
+                                    <action selector="didTapPlayAsGuestButton" destination="Y6W-OH-hqX" eventType="touchUpInside" id="wyU-Ye-PGo"/>
                                     <action selector="playAsGuest" destination="Y6W-OH-hqX" eventType="touchUpInside" id="JJ1-78-cUp"/>
                                 </connections>
                             </button>
@@ -82,6 +83,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Bru-aK-0dC"/>
+                    <connections>
+                        <outlet property="logInMenuView" destination="5EZ-qb-Rvc" id="UgB-cF-1NH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="rsW-2G-ITX" userLabel="Exit" sceneMemberID="exit"/>

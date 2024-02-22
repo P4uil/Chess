@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="TL0-RO-ude">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="6dM-1M-xcu" customClass="ViewController" customModule="Chess" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ebO-Mz-LqY">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hDq-hs-Hc0" customClass="BoardView" customModule="Chess" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="229.66666666666663" width="393" height="393"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="hDq-hs-Hc0" secondAttribute="height" multiplier="1:1" id="m2d-Rg-acc"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RT1-I6-Mfc">
+                                <rect key="frame" x="161" y="630.66666666666663" width="71" height="36.333333333333371"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="RT1-I6-Mfc" secondAttribute="height" multiplier="68:35" id="3vQ-Et-x68"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Reset"/>
+                                <connections>
+                                    <action selector="reset:" destination="6dM-1M-xcu" eventType="touchUpInside" id="w4y-2R-BDq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="igU-69-Xft">
+                                <rect key="frame" x="65" y="675" width="96" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Advertise"/>
+                                <connections>
+                                    <action selector="advertise:" destination="6dM-1M-xcu" eventType="touchUpInside" id="Qh8-ax-Ne3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qLS-TG-Rdj">
+                                <rect key="frame" x="254" y="675" width="56" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Join"/>
+                                <connections>
+                                    <action selector="join:" destination="6dM-1M-xcu" eventType="touchUpInside" id="Xoo-yG-aCu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="PPt-JT-cLC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hDq-hs-Hc0" firstAttribute="leading" secondItem="PPt-JT-cLC" secondAttribute="leading" id="1pF-h7-YLg"/>
+                            <constraint firstItem="RT1-I6-Mfc" firstAttribute="top" secondItem="hDq-hs-Hc0" secondAttribute="bottom" constant="8" symbolic="YES" id="7OW-HG-kVc"/>
+                            <constraint firstItem="RT1-I6-Mfc" firstAttribute="leading" secondItem="PPt-JT-cLC" secondAttribute="leading" constant="161" id="Mth-2D-eE4"/>
+                            <constraint firstItem="PPt-JT-cLC" firstAttribute="trailing" secondItem="hDq-hs-Hc0" secondAttribute="trailing" id="ZIZ-d6-Thf"/>
+                            <constraint firstItem="PPt-JT-cLC" firstAttribute="trailing" secondItem="RT1-I6-Mfc" secondAttribute="trailing" constant="161" id="tIt-6a-qbC"/>
+                            <constraint firstItem="hDq-hs-Hc0" firstAttribute="centerY" secondItem="ebO-Mz-LqY" secondAttribute="centerY" id="zPo-JT-eUq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="BoardView" destination="hDq-hs-Hc0" id="EiF-M5-v2B"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PDh-Ow-Q2o" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="24" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

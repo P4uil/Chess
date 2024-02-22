@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BEZ-KG-uP7">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
@@ -8,68 +8,59 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Log In View Controller-->
+        <scene sceneID="BxY-jh-Aj5">
             <objects>
-                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="Chess" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController storyboardIdentifier="LogInViewController" id="JlX-VY-dA9" customClass="LogInViewController" customModule="Chess" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aM5-nW-FmD">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R9T-yO-ev0" customClass="BoardView" customModule="Chess" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="227" width="390" height="390"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="R9T-yO-ev0" secondAttribute="height" multiplier="1:1" id="VVk-BY-6h7"/>
-                                </constraints>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="21h-wx-v5Y">
-                                <rect key="frame" x="161" y="625" width="68" height="35"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="21h-wx-v5Y" secondAttribute="height" multiplier="68:35" id="1N3-aX-6vM"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Reset"/>
-                                <connections>
-                                    <action selector="reset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3p8-wI-fnu"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aTE-AI-VtV">
-                                <rect key="frame" x="65" y="675" width="96" height="35"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YNZ-7b-mKb">
+                                <rect key="frame" x="174" y="412" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TTR-ry-kcf">
+                                <rect key="frame" x="136" y="774" width="125" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Advertise"/>
+                                <buttonConfiguration key="configuration" style="filled" title="play as guest">
+                                    <fontDescription key="titleFontDescription" name="Verdana" family="Verdana" pointSize="15"/>
+                                </buttonConfiguration>
                                 <connections>
-                                    <action selector="advertise:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1QQ-Ps-wLs"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2DQ-1h-POz">
-                                <rect key="frame" x="254" y="675" width="56" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Join"/>
-                                <connections>
-                                    <action selector="join:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jIc-uQ-Lsq"/>
+                                    <action selector="didTapPlayAsGuestButton:" destination="JlX-VY-dA9" eventType="touchUpInside" id="6l1-qd-sSn"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <viewLayoutGuide key="safeArea" id="bHe-5N-geJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="21h-wx-v5Y" firstAttribute="top" secondItem="R9T-yO-ev0" secondAttribute="bottom" constant="8" symbolic="YES" id="3iV-2z-NAD"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="21h-wx-v5Y" secondAttribute="trailing" constant="161" id="E2T-kB-3MM"/>
-                            <constraint firstItem="R9T-yO-ev0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="GBb-BY-FeF"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="R9T-yO-ev0" secondAttribute="trailing" id="aLv-qh-ZIb"/>
-                            <constraint firstItem="21h-wx-v5Y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="161" id="kla-8l-VJm"/>
-                            <constraint firstItem="R9T-yO-ev0" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="uNv-ME-3Yk"/>
-                        </constraints>
                     </view>
-                    <connections>
-                        <outlet property="BoardView" destination="R9T-yO-ev0" id="79S-sj-INP"/>
-                    </connections>
+                    <navigationItem key="navigationItem" id="MfB-VG-Ag7"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G6f-Z0-gJ1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="189" y="3"/>
+            <point key="canvasLocation" x="283.07692307692309" y="2.8436018957345972"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="32j-q5-HIi">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BEZ-KG-uP7" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="71I-jW-5gV">
+                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="JlX-VY-dA9" kind="relationship" relationship="rootViewController" id="1al-7f-RGz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FLy-FN-Wm4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-646.15384615384608" y="2.8436018957345972"/>
         </scene>
     </scenes>
     <resources>

@@ -1,22 +1,21 @@
 //
-//  LogInMenu.swift
+//  LogInViewController.swift
 //  Chess
 //
-//  Created by Павел Тоцкий on 17.02.2024.
+//  Created by Павел Тоцкий on 20.02.2024.
 //
 
 import Foundation
 import UIKit
 
-class LogInMenu: UIViewController {
+class LogInViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+        
     
-    @IBOutlet var logInMenuView: UIView!
-    
-    @IBAction func didTapPlayAsGuestButton() {
+    @IBAction func didTapPlayAsGuestButton(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "ViewController", bundle: nil)
         let viewcontroller = storyboard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
         navigationController?.pushViewController(viewcontroller, animated: true)

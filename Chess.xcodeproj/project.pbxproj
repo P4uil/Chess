@@ -20,9 +20,9 @@
 		192543962B714D7F008FE4FB /* ChessPieces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192543952B714D7F008FE4FB /* ChessPieces.swift */; };
 		192543982B714E69008FE4FB /* ChessEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192543972B714E69008FE4FB /* ChessEngine.swift */; };
 		1925439A2B72032B008FE4FB /* ChessDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192543992B72032B008FE4FB /* ChessDelegate.swift */; };
+		198C28DF2B87410000A9CC53 /* ViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 198C28DE2B87410000A9CC53 /* ViewController.storyboard */; };
 		199957422B764C7000FC06E9 /* drop.wav in Resources */ = {isa = PBXBuildFile; fileRef = 199957412B764C7000FC06E9 /* drop.wav */; };
-		19C76D052B81182600B81DCE /* LogInMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19C76D042B81182600B81DCE /* LogInMenu.storyboard */; };
-		19C76D072B811C0600B81DCE /* LogInMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C76D062B811C0600B81DCE /* LogInMenu.swift */; };
+		19C76D0A2B83F43A00B81DCE /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C76D092B83F43A00B81DCE /* LogInViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,9 +60,9 @@
 		192543952B714D7F008FE4FB /* ChessPieces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessPieces.swift; sourceTree = "<group>"; };
 		192543972B714E69008FE4FB /* ChessEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessEngine.swift; sourceTree = "<group>"; };
 		192543992B72032B008FE4FB /* ChessDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessDelegate.swift; sourceTree = "<group>"; };
+		198C28DE2B87410000A9CC53 /* ViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ViewController.storyboard; sourceTree = "<group>"; };
 		199957412B764C7000FC06E9 /* drop.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = drop.wav; sourceTree = "<group>"; };
-		19C76D042B81182600B81DCE /* LogInMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LogInMenu.storyboard; sourceTree = "<group>"; };
-		19C76D062B811C0600B81DCE /* LogInMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInMenu.swift; sourceTree = "<group>"; };
+		19C76D092B83F43A00B81DCE /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +118,7 @@
 				192543612B708877008FE4FB /* AppDelegate.swift */,
 				192543632B708877008FE4FB /* SceneDelegate.swift */,
 				192543652B708877008FE4FB /* ViewController.swift */,
+				198C28DE2B87410000A9CC53 /* ViewController.storyboard */,
 				192543672B708877008FE4FB /* Main.storyboard */,
 				192543932B70B93E008FE4FB /* BoardView.swift */,
 				192543952B714D7F008FE4FB /* ChessPieces.swift */,
@@ -147,10 +148,10 @@
 		19A9D0512B7BB4250083A589 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1925436F2B708879008FE4FB /* Info.plist */,
 				1925436A2B708879008FE4FB /* Assets.xcassets */,
 				199957412B764C7000FC06E9 /* drop.wav */,
 				1925436C2B708879008FE4FB /* LaunchScreen.storyboard */,
-				1925436F2B708879008FE4FB /* Info.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -158,8 +159,7 @@
 		19C76D082B83A56B00B81DCE /* LogIn */ = {
 			isa = PBXGroup;
 			children = (
-				19C76D042B81182600B81DCE /* LogInMenu.storyboard */,
-				19C76D062B811C0600B81DCE /* LogInMenu.swift */,
+				19C76D092B83F43A00B81DCE /* LogInViewController.swift */,
 			);
 			path = LogIn;
 			sourceTree = "<group>";
@@ -269,7 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1925436E2B708879008FE4FB /* LaunchScreen.storyboard in Resources */,
-				19C76D052B81182600B81DCE /* LogInMenu.storyboard in Resources */,
+				198C28DF2B87410000A9CC53 /* ViewController.storyboard in Resources */,
 				199957422B764C7000FC06E9 /* drop.wav in Resources */,
 				1925436B2B708879008FE4FB /* Assets.xcassets in Resources */,
 				192543692B708877008FE4FB /* Main.storyboard in Resources */,
@@ -297,11 +297,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19C76D072B811C0600B81DCE /* LogInMenu.swift in Sources */,
 				192543982B714E69008FE4FB /* ChessEngine.swift in Sources */,
 				192543662B708877008FE4FB /* ViewController.swift in Sources */,
 				1925439A2B72032B008FE4FB /* ChessDelegate.swift in Sources */,
 				192543942B70B93E008FE4FB /* BoardView.swift in Sources */,
+				19C76D0A2B83F43A00B81DCE /* LogInViewController.swift in Sources */,
 				192543622B708877008FE4FB /* AppDelegate.swift in Sources */,
 				192543962B714D7F008FE4FB /* ChessPieces.swift in Sources */,
 				192543642B708877008FE4FB /* SceneDelegate.swift in Sources */,
